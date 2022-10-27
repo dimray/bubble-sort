@@ -1,12 +1,15 @@
 def bubble_sort(arr)
+  
   numb = arr.length-1
   numb.times do
-    for i in 0..arr.length-2
+    count = 2
+    for i in 0..arr.length-count
       if arr[i] > arr[i+1]
-        arr = arr.insert(i, arr.delete_at(i +1))        
+        arr = arr.insert(i, arr.delete_at(i +1)) 
       end
+      count += 1   
     end
   end
   p arr  
 end
-bubble_sort([4,3,78,2,0,2,7,15,3,4])
+bubble_sort([6,1,3,55,3,9,1,2, 33])
